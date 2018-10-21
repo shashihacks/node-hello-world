@@ -1,9 +1,10 @@
-console.log("hello")
-(function(){
-	alert("node js")
-})();
+var express = require('express');
+var app = express();
 
-let array=[1,25,1,3]
-array.forEach(element){
-	console.log("element")
-}
+app.get('/', function (request, response) {
+  response.send('Hello World...');
+});
+
+app.listen(6666, function () {
+  console.log('Example app listening on port 6666!');
+});
